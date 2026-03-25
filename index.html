@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نجار تفصيل دواليب وغرف ملابس</title>
+    <meta name="description" content="نجار تفصيل دواليب وغرف ملابس في الرياض. تصميم خزائن، غرف نوم، وتفصيل حسب الطلب بجودة عالية وأسعار تنافسية.">
+    <meta name="keywords" content="نجار, تفصيل دواليب, غرف ملابس, دريسنج روم, نجار الرياض, تصميم خزائن">
+    
+    <meta name="google-site-verification" content="pCIk-N-CSl7Ucy02iNoICOL0SRpTfML_MS0RWMqfoLo" />
+    
+    <meta name="geo.region" content="SA-01" />
+    <meta name="geo.placename" content="Riyadh" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "نجار تفصيل دواليب وغرف ملابس",
+      "image": "https://via.placeholder.com/500x500?text=Closets+Carpenter",
+      "@id": "",
+      "url": "https://yourwebsite.com",
+      "telephone": "+966567141523",
+      "email": "rdalysh353@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6522 منصور الغزال",
+        "addressLocality": "المِصِيْف، الرياض",
+        "postalCode": "12465",
+        "addressCountry": "SA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.7135517, 
+        "longitude": 46.6752957
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
     <style>
         /* الإعدادات الأساسية والألوان (كحلي داكن وذهبي) */
         :root {
@@ -145,6 +187,32 @@
             font-weight: 800;
         }
 
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .lang-toggle {
+            color: var(--gold-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 700;
+            background: rgba(255,255,255,0.05);
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: 0.3s;
+        }
+
+        .lang-toggle:hover {
+            background: var(--gold-color);
+            color: var(--primary-color);
+        }
+
         .menu-toggle {
             color: var(--gold-color);
             font-size: 1.8rem;
@@ -156,17 +224,22 @@
         /* القائمة الجانبية المنسدلة */
         .side-menu {
             position: fixed;
-            top: 70px; left: -100%;
+            top: 70px; 
             width: 250px; height: calc(100vh - 70px);
             background: var(--primary-color);
-            border-right: 2px solid var(--gold-color);
-            transition: left 0.4s ease;
+            border-inline-end: 2px solid var(--gold-color);
+            transition: all 0.4s ease;
             z-index: 999;
             display: flex;
             flex-direction: column;
             padding-top: 20px;
         }
-        .side-menu.active { left: 0; }
+        
+        html[dir="rtl"] .side-menu { left: -100%; }
+        html[dir="rtl"] .side-menu.active { left: 0; }
+        html[dir="ltr"] .side-menu { right: -100%; }
+        html[dir="ltr"] .side-menu.active { right: 0; }
+
         .side-menu a {
             color: #fff;
             text-decoration: none;
@@ -174,9 +247,12 @@
             font-size: 1.1rem;
             border-bottom: 1px solid rgba(255,255,255,0.05);
             transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         .side-menu a:hover { background: var(--gold-color); color: #000; }
-        .side-menu i { margin-left: 10px; width: 25px; text-align: center; }
+        .side-menu i { width: 25px; text-align: center; }
 
         /* ---------------- القسم الرئيسي (الرئيسية) ---------------- */
         .hero {
@@ -369,7 +445,7 @@
         .contact-item i {
             color: var(--gold-color); 
             font-size: 1.3rem; 
-            margin-left: 10px; 
+            margin-inline-end: 10px; 
             width: 25px; 
             text-align: center;
         }
@@ -414,7 +490,7 @@
             transition: 0.3s;
         }
         .royal-signature:hover { background: var(--gold-color); color: #111; transform: scale(1.05); }
-        .royal-signature i { margin-left: 6px; font-size: 1rem;}
+        .royal-signature i { margin-inline-start: 6px; font-size: 1rem;}
 
         /* ---------------- الشريط السفلي ---------------- */
         .bottom-nav {
@@ -461,6 +537,11 @@
             animation: float-wa 2.5s ease-in-out infinite;
         }
         
+        html[dir="ltr"] .floating-wa {
+            left: auto;
+            right: 20px;
+        }
+        
         .floating-wa:hover {
             background-color: #128C7E;
         }
@@ -484,15 +565,15 @@
     <div id="loader">
         <div class="loader-header">
             <a href="https://wa.me/966547194788" target="_blank" class="royal-signature">
-                تم التصميم بواسطة المهندس / إسلام الشيخ <i class="fab fa-whatsapp"></i>
+                <span data-i18n="dev-sig">تم التصميم بواسطة المهندس / إسلام الشيخ</span> <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         
         <div class="loader-icon-wrapper">
             <i class="fas fa-couch"></i>
         </div>
-        <h2 class="loader-title">نجار تفصيل دواليب وغرف ملابس يرحب بكم</h2>
-        <p class="loader-text">جاري التحميل <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></p>
+        <h2 class="loader-title" data-i18n="loader-title">نجار تفصيل دواليب وغرف ملابس يرحب بكم</h2>
+        <p class="loader-text"><span data-i18n="loading-text">جاري التحميل</span> <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></p>
     </div>
 
     <header class="main-header">
@@ -500,164 +581,170 @@
             <div class="brand-icon">
                 <i class="fas fa-couch"></i>
             </div>
-            <div class="brand-name">نجار تفصيل دواليب وغرف ملابس</div>
+            <div class="brand-name" data-i18n="brand">نجار تفصيل دواليب وغرف ملابس</div>
         </div>
-        <i class="fas fa-bars menu-toggle" id="menu-btn"></i>
+        <div class="header-controls">
+            <div class="lang-toggle" id="lang-toggle">
+                <i class="fas fa-globe"></i>
+                <span id="lang-text">EN</span>
+            </div>
+            <i class="fas fa-bars menu-toggle" id="menu-btn"></i>
+        </div>
     </header>
 
     <div class="side-menu" id="side-menu">
-        <a href="#home" class="menu-link"><i class="fas fa-home"></i> الرئيسية</a>
-        <a href="#services" class="menu-link"><i class="fas fa-tools"></i> الخدمات</a>
-        <a href="#why-us" class="menu-link"><i class="fas fa-star"></i> لماذا نحن</a>
-        <a href="#contact" class="menu-link"><i class="fas fa-phone"></i> تواصل معنا</a>
+        <a href="#home" class="menu-link"><i class="fas fa-home"></i> <span data-i18n="nav-home">الرئيسية</span></a>
+        <a href="#services" class="menu-link"><i class="fas fa-tools"></i> <span data-i18n="nav-services">الخدمات</span></a>
+        <a href="#why-us" class="menu-link"><i class="fas fa-star"></i> <span data-i18n="nav-why">لماذا نحن</span></a>
+        <a href="#contact" class="menu-link"><i class="fas fa-phone"></i> <span data-i18n="nav-contact">تواصل معنا</span></a>
     </div>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>نجار تفصيل دواليب وغرف ملابس</h1>
-            <p>نصنع الفخامة من أجود أنواع الأخشاب. متخصصون في تفصيل دواليب الملابس، غرف الدريسنج روم، والخزائن المبتكرة. نجمع بين دقة التنفيذ والتصميم العصري لنلبي كافة تطلعاتك بأسعار تنافسية وبجودة تدوم طويلاً.</p>
+            <h1 data-i18n="hero-title">نجار تفصيل دواليب وغرف ملابس</h1>
+            <p data-i18n="hero-desc">نصنع الفخامة من أجود أنواع الأخشاب. متخصصون في تفصيل دواليب الملابس، غرف الدريسنج روم، والخزائن المبتكرة. نجمع بين دقة التنفيذ والتصميم العصري لنلبي كافة تطلعاتك بأسعار تنافسية وبجودة تدوم طويلاً.</p>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title">خدماتنا</h2>
+        <h2 class="section-title" data-i18n="section-services">خدماتنا</h2>
         <div class="services-container">
             <div class="service-card">
                 <i class="fas fa-door-closed service-icon"></i>
-                <h3>تصميم وتفصيل خزائن</h3>
-                <p>نبتكر لك خزائن عصرية تناسب كافة المساحات وتلبي احتياجاتك التخزينية. نعتمد على خامات عالية الجودة وإكسسوارات متينة لضمان عمر أطول، مع تشطيبات احترافية تضفي لمسة من الرقي والتنظيم على مساحتك بأسعار مميزة وسرعة في الإنجاز.</p>
+                <h3 data-i18n="s1-title">تصميم وتفصيل خزائن</h3>
+                <p data-i18n="s1-desc">نبتكر لك خزائن عصرية تناسب كافة المساحات وتلبي احتياجاتك التخزينية. نعتمد على خامات عالية الجودة وإكسسوارات متينة لضمان عمر أطول، مع تشطيبات احترافية تضفي لمسة من الرقي والتنظيم على مساحتك بأسعار مميزة وسرعة في الإنجاز.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-box-open service-icon"></i>
-                <h3>تصميم وتفصيل دواليب</h3>
-                <p>نقدم لك دواليب مصممة خصيصاً لتجمع بين الأناقة وسعة التخزين. نهتم بالتقسيم الداخلي العملي مع استخدام أخشاب مقاومة للعوامل المختلفة، لتنظيم أغراضك بشكل مثالي وبألوان تتناسب مع ديكور غرفتك وتلبي كافة تطلعاتك.</p>
+                <h3 data-i18n="s2-title">تصميم وتفصيل دواليب</h3>
+                <p data-i18n="s2-desc">نقدم لك دواليب مصممة خصيصاً لتجمع بين الأناقة وسعة التخزين. نهتم بالتقسيم الداخلي العملي مع استخدام أخشاب مقاومة للعوامل المختلفة، لتنظيم أغراضك بشكل مثالي وبألوان تتناسب مع ديكور غرفتك وتلبي كافة تطلعاتك.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-bed service-icon"></i>
-                <h3>تصميم وتفصيل غرف نوم</h3>
-                <p>نصنع لك واحة من الهدوء والراحة من خلال غرف نوم مصممة بأعلى معايير الجودة. نهتم بكل التفاصيل من قوة الخشب إلى جمال التشطيب لنمنحك غرفة نوم فاخرة تعكس ذوقك الرفيع وتضمن لك متانة وفخامة تدوم لسنوات.</p>
+                <h3 data-i18n="s3-title">تصميم وتفصيل غرف نوم</h3>
+                <p data-i18n="s3-desc">نصنع لك واحة من الهدوء والراحة من خلال غرف نوم مصممة بأعلى معايير الجودة. نهتم بكل التفاصيل من قوة الخشب إلى جمال التشطيب لنمنحك غرفة نوم فاخرة تعكس ذوقك الرفيع وتضمن لك متانة وفخامة تدوم لسنوات.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-child service-icon"></i>
-                <h3>تصميم وتفصيل غرف أطفال</h3>
-                <p>نصمم غرف أطفال تجمع بين الأمان، المرح، والمتانة. نستخدم طلاء آمن وألوان مبهجة لإنشاء بيئة مثالية لنوم ولعب أطفالك، مع استغلال ذكي للمساحات لتوفير الراحة التامة وإطلاق العنان لمخيلتهم في مكان آمن.</p>
+                <h3 data-i18n="s4-title">تصميم وتفصيل غرف أطفال</h3>
+                <p data-i18n="s4-desc">نصمم غرف أطفال تجمع بين الأمان، المرح، والمتانة. نستخدم طلاء آمن وألوان مبهجة لإنشاء بيئة مثالية لنوم ولعب أطفالك، مع استغلال ذكي للمساحات لتوفير الراحة التامة وإطلاق العنان لمخيلتهم في مكان آمن.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-boxes service-icon"></i>
-                <h3>تصميم وتفصيل غرف تخزين</h3>
-                <p>نقدم لك حلول تخزين ذكية تقضي على الفوضى في منزلك. نصمم أرفف قوية ووحدات تخزين عملية تتحمل الأوزان وتسهل عليك ترتيب الأغراض والوصول إليها بكل سهولة، لنجعل منزلك أكثر تنظيماً واتساعاً.</p>
+                <h3 data-i18n="s5-title">تصميم وتفصيل غرف تخزين</h3>
+                <p data-i18n="s5-desc">نقدم لك حلول تخزين ذكية تقضي على الفوضى في منزلك. نصمم أرفف قوية ووحدات تخزين عملية تتحمل الأوزان وتسهل عليك ترتيب الأغراض والوصول إليها بكل سهولة، لنجعل منزلك أكثر تنظيماً واتساعاً.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-border-all service-icon"></i>
-                <h3>تفصيل وتصميم ديكورات جدارية</h3>
-                <p>ارتقِ بجمال جدران منزلك مع ديكورات خشبية وتكسيات جدارية تضفي فخامة وعمقاً بصرياً لمجالسك وصالاتك. تصاميمنا تجمع بين الحداثة والأصالة لتكوين لوحة فنية رائعة تلفت الأنظار وتعكس ذوقك الفريد.</p>
+                <h3 data-i18n="s6-title">تفصيل وتصميم ديكورات جدارية</h3>
+                <p data-i18n="s6-desc">ارتقِ بجمال جدران منزلك مع ديكورات خشبية وتكسيات جدارية تضفي فخامة وعمقاً بصرياً لمجالسك وصالاتك. تصاميمنا تجمع بين الحداثة والأصالة لتكوين لوحة فنية رائعة تلفت الأنظار وتعكس ذوقك الفريد.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-tv service-icon"></i>
-                <h3>تفصيل ديكور شاشات</h3>
-                <p>اجعل منطقة التلفزيون مركز الأناقة في صالتك. نصمم وننفذ ديكورات شاشات خشبية جذابة مع إضاءات مخفية وأرفف ذكية لإخفاء الأسلاك وإبراز جمال المكان بلمسة سينمائية عصرية تناسب كافة المجالس.</p>
+                <h3 data-i18n="s7-title">تفصيل ديكور شاشات</h3>
+                <p data-i18n="s7-desc">اجعل منطقة التلفزيون مركز الأناقة في صالتك. نصمم وننفذ ديكورات شاشات خشبية جذابة مع إضاءات مخفية وأرفف ذكية لإخفاء الأسلاك وإبراز جمال المكان بلمسة سينمائية عصرية تناسب كافة المجالس.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-couch service-icon"></i>
-                <h3>تصميم وتفصيل موبيليا</h3>
-                <p>نجدد منزلك بقطع موبيليا فريدة ومصممة خصيصاً لك. نصنع أثاثاً متيناً وعصرياً يكمل أناقة ديكورك الداخلي ويتحمل الاستخدام اليومي بأيدي أمهر النجارين، لنجمع بين اللمسة الفنية والجانب العملي المريح.</p>
+                <h3 data-i18n="s8-title">تصميم وتفصيل موبيليا</h3>
+                <p data-i18n="s8-desc">نجدد منزلك بقطع موبيليا فريدة ومصممة خصيصاً لك. نصنع أثاثاً متيناً وعصرياً يكمل أناقة ديكورك الداخلي ويتحمل الاستخدام اليومي بأيدي أمهر النجارين، لنجمع بين اللمسة الفنية والجانب العملي المريح.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-hammer service-icon"></i>
-                <h3>صيانة وتصليح النجارة</h3>
-                <p>نوفر خدمات صيانة شاملة للأعمال الخشبية. من إصلاح الأبواب والكوالين إلى تجديد الأخشاب التالفة، نعيد لأثاثك متانته ورونقه بسرعة واحترافية عالية وبأقل التكاليف لضمان بقاء ديكوراتك في أبهى صورة.</p>
+                <h3 data-i18n="s9-title">صيانة وتصليح النجارة</h3>
+                <p data-i18n="s9-desc">نوفر خدمات صيانة شاملة للأعمال الخشبية. من إصلاح الأبواب والكوالين إلى تجديد الأخشاب التالفة، نعيد لأثاثك متانته ورونقه بسرعة واحترافية عالية وبأقل التكاليف لضمان بقاء ديكوراتك في أبهى صورة.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-tools service-icon"></i>
-                <h3>صيانة وتصليح خزائن</h3>
-                <p>نعالج كافة مشاكل الخزائن والدواليب، بدءاً من الأبواب السحابة والمفصلات وحتى الأرفف المكسورة. نستخدم قطع غيار قوية لضمان استمرارية عمل خزائنك بسلاسة وعودتها لحالتها المثالية لتستمتع براحة البال.</p>
+                <h3 data-i18n="s10-title">صيانة وتصليح خزائن</h3>
+                <p data-i18n="s10-desc">نعالج كافة مشاكل الخزائن والدواليب، بدءاً من الأبواب السحابة والمفصلات وحتى الأرفف المكسورة. نستخدم قطع غيار قوية لضمان استمرارية عمل خزائنك بسلاسة وعودتها لحالتها المثالية لتستمتع براحة البال.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-home service-icon"></i>
-                <h3>صيانة منزلية للديكور والموبيليا</h3>
-                <p>نحافظ على استثمارك في أثاثك وديكوراتك من خلال خدمات صيانة وتجديد متكاملة. نعالج الخدوش ونجدد الدهانات لتعود قطعك الخشبية كالجديدة تماماً، مع التزام تام بالسرعة والجودة في التنفيذ.</p>
+                <h3 data-i18n="s11-title">صيانة منزلية للديكور والموبيليا</h3>
+                <p data-i18n="s11-desc">نحافظ على استثمارك في أثاثك وديكوراتك من خلال خدمات صيانة وتجديد متكاملة. نعالج الخدوش ونجدد الدهانات لتعود قطعك الخشبية كالجديدة تماماً، مع التزام تام بالسرعة والجودة في التنفيذ.</p>
             </div>
         </div>
     </section>
 
     <section id="why-us">
-        <h2 class="section-title">لماذا نحن</h2>
+        <h2 class="section-title" data-i18n="section-why">لماذا نحن</h2>
         <div class="why-us-container">
             <div class="why-card">
                 <i class="fas fa-star"></i>
-                <h3>جودة أعمالنا</h3>
-                <p>نستخدم أجود أنواع الأخشاب وأحدث التقنيات لنضمن لك قطعاً فنية متينة ومتقنة تعكس أعلى معايير الجودة.</p>
+                <h3 data-i18n="w1-title">جودة أعمالنا</h3>
+                <p data-i18n="w1-desc">نستخدم أجود أنواع الأخشاب وأحدث التقنيات لنضمن لك قطعاً فنية متينة ومتقنة تعكس أعلى معايير الجودة.</p>
             </div>
             <div class="why-card">
                 <i class="fas fa-clock"></i>
-                <h3>التزامنا بالمواعيد</h3>
-                <p>نقدر وقتك الثمين، لذا نحرص على تنفيذ وتسليم كافة المشاريع بدقة متناهية في الوقت المتفق عليه تماماً.</p>
+                <h3 data-i18n="w2-title">التزامنا بالمواعيد</h3>
+                <p data-i18n="w2-desc">نقدر وقتك الثمين، لذا نحرص على تنفيذ وتسليم كافة المشاريع بدقة متناهية في الوقت المتفق عليه تماماً.</p>
             </div>
             <div class="why-card">
                 <i class="fas fa-shield-alt"></i>
-                <h3>ضمان أعمالنا</h3>
-                <p>نقدم ضماناً شاملاً على كافة أعمال النجارة والتفصيل لنوفر لك راحة البال وثقة مستدامة في خدماتنا.</p>
+                <h3 data-i18n="w3-title">ضمان أعمالنا</h3>
+                <p data-i18n="w3-desc">نقدم ضماناً شاملاً على كافة أعمال النجارة والتفصيل لنوفر لك راحة البال وثقة مستدامة في خدماتنا.</p>
             </div>
             <div class="why-card">
                 <i class="fas fa-tags"></i>
-                <h3>اسعارنا التنافسية</h3>
-                <p>نوفر لك معادلة مثالية تجمع بين الفخامة والجودة العالية بأسعار مدروسة وتنافسية تناسب ميزانيتك.</p>
+                <h3 data-i18n="w4-title">اسعارنا التنافسية</h3>
+                <p data-i18n="w4-desc">نوفر لك معادلة مثالية تجمع بين الفخامة والجودة العالية بأسعار مدروسة وتنافسية تناسب ميزانيتك.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title">تواصل معنا</h2>
+        <h2 class="section-title" data-i18n="section-contact">تواصل معنا</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>نسعد بتواصلكم</h3>
+                <h3 data-i18n="contact-happy">نسعد بتواصلكم</h3>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>رقم التواصل: 0567141523</span>
+                    <span data-i18n="contact-phone">رقم التواصل: 0567141523</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>info@closets-carpenter.com</span>
+                    <span>rdalysh353@gmail.com</span>
                 </div>
             </div>
             
             <div class="contact-map">
                 <div class="pin-title">
-                    <i class="fas fa-map-marker-alt" style="color:var(--gold-color); margin-left:8px;"></i>
-                    الرياض، المملكة العربية السعودية
+                    <i class="fas fa-map-marker-alt" style="color:var(--gold-color); margin-inline-end:8px;"></i>
+                    <span data-i18n="contact-address">6522 منصور الغزال، المِصِيْف، الرياض 12465</span>
                 </div>
                 <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d482.6717200013661!2d46.75074740327459!3d24.75659983803405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ1JzIzLjIiTiA0NsKwNDUnMDIuMCJF!5e1!3m2!1sar!2ssa!4v1772844926240!5m2!1sar!2ssa" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.21729197905!2d46.6812014!3d24.758162199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efd4573904b5b%3A0x85236fc7bbbac3a6!2zNjUyMiDZhdmG2LXZiNixINin2YTYutiy2KfZhNiMIDMzMDPYjCDYp9mE2YXYtdmK2YHYjCDYp9mE2LHZitin2LYgMTI0NjU!5e1!3m2!1sar!2ssa!4v1774425659138!5m2!1sar!2ssa" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="footer">
-        <div class="copyright">
+        <div class="copyright" data-i18n="footer-copy">
             جميع الحقوق محفوظة لدى/ نجار تفصيل دواليب وغرف ملابس 2027
         </div>
         <a href="https://wa.me/966547194788" target="_blank" class="royal-signature">
-            تم التصميم بواسطة المهندس / إسلام الشيخ <i class="fab fa-whatsapp"></i>
+            <span data-i18n="dev-sig">تم التصميم بواسطة المهندس / إسلام الشيخ</span> <i class="fab fa-whatsapp"></i>
         </a>
     </footer>
 
     <nav class="bottom-nav">
         <a href="#home" class="nav-item">
             <i class="fas fa-home"></i>
-            الرئيسية
+            <span data-i18n="nav-home">الرئيسية</span>
         </a>
         <a href="#services" class="nav-item">
             <i class="fas fa-tools"></i>
-            الخدمات
+            <span data-i18n="nav-services">الخدمات</span>
         </a>
         <a href="#why-us" class="nav-item">
             <i class="fas fa-star"></i>
-            لماذا نحن
+            <span data-i18n="nav-why">لماذا نحن</span>
         </a>
         <a href="#contact" class="nav-item">
             <i class="fas fa-phone"></i>
-            تواصل معنا
+            <span data-i18n="nav-contact">تواصل معنا</span>
         </a>
     </nav>
 
@@ -666,6 +753,131 @@
     </a>
 
     <script>
+        // إعدادات تعدد اللغات
+        const translations = {
+            ar: {
+                "brand": "نجار تفصيل دواليب وغرف ملابس",
+                "loader-title": "نجار تفصيل دواليب وغرف ملابس يرحب بكم",
+                "loading-text": "جاري التحميل",
+                "nav-home": "الرئيسية",
+                "nav-services": "الخدمات",
+                "nav-why": "لماذا نحن",
+                "nav-contact": "تواصل معنا",
+                "hero-title": "نجار تفصيل دواليب وغرف ملابس",
+                "hero-desc": "نصنع الفخامة من أجود أنواع الأخشاب. متخصصون في تفصيل دواليب الملابس، غرف الدريسنج روم، والخزائن المبتكرة. نجمع بين دقة التنفيذ والتصميم العصري لنلبي كافة تطلعاتك بأسعار تنافسية وبجودة تدوم طويلاً.",
+                "section-services": "خدماتنا",
+                "s1-title": "تصميم وتفصيل خزائن",
+                "s1-desc": "نبتكر لك خزائن عصرية تناسب كافة المساحات وتلبي احتياجاتك التخزينية. نعتمد على خامات عالية الجودة وإكسسوارات متينة لضمان عمر أطول، مع تشطيبات احترافية تضفي لمسة من الرقي والتنظيم على مساحتك بأسعار مميزة وسرعة في الإنجاز.",
+                "s2-title": "تصميم وتفصيل دواليب",
+                "s2-desc": "نقدم لك دواليب مصممة خصيصاً لتجمع بين الأناقة وسعة التخزين. نهتم بالتقسيم الداخلي العملي مع استخدام أخشاب مقاومة للعوامل المختلفة، لتنظيم أغراضك بشكل مثالي وبألوان تتناسب مع ديكور غرفتك وتلبي كافة تطلعاتك.",
+                "s3-title": "تصميم وتفصيل غرف نوم",
+                "s3-desc": "نصنع لك واحة من الهدوء والراحة من خلال غرف نوم مصممة بأعلى معايير الجودة. نهتم بكل التفاصيل من قوة الخشب إلى جمال التشطيب لنمنحك غرفة نوم فاخرة تعكس ذوقك الرفيع وتضمن لك متانة وفخامة تدوم لسنوات.",
+                "s4-title": "تصميم وتفصيل غرف أطفال",
+                "s4-desc": "نصمم غرف أطفال تجمع بين الأمان، المرح، والمتانة. نستخدم طلاء آمن وألوان مبهجة لإنشاء بيئة مثالية لنوم ولعب أطفالك، مع استغلال ذكي للمساحات لتوفير الراحة التامة وإطلاق العنان لمخيلتهم في مكان آمن.",
+                "s5-title": "تصميم وتفصيل غرف تخزين",
+                "s5-desc": "نقدم لك حلول تخزين ذكية تقضي على الفوضى في منزلك. نصمم أرفف قوية ووحدات تخزين عملية تتحمل الأوزان وتسهل عليك ترتيب الأغراض والوصول إليها بكل سهولة، لنجعل منزلك أكثر تنظيماً واتساعاً.",
+                "s6-title": "تفصيل وتصميم ديكورات جدارية",
+                "s6-desc": "ارتقِ بجمال جدران منزلك مع ديكورات خشبية وتكسيات جدارية تضفي فخامة وعمقاً بصرياً لمجالسك وصالاتك. تصاميمنا تجمع بين الحداثة والأصالة لتكوين لوحة فنية رائعة تلفت الأنظار وتعكس ذوقك الفريد.",
+                "s7-title": "تفصيل ديكور شاشات",
+                "s7-desc": "اجعل منطقة التلفزيون مركز الأناقة في صالتك. نصمم وننفذ ديكورات شاشات خشبية جذابة مع إضاءات مخفية وأرفف ذكية لإخفاء الأسلاك وإبراز جمال المكان بلمسة سينمائية عصرية تناسب كافة المجالس.",
+                "s8-title": "تصميم وتفصيل موبيليا",
+                "s8-desc": "نجدد منزلك بقطع موبيليا فريدة ومصممة خصيصاً لك. نصنع أثاثاً متيناً وعصرياً يكمل أناقة ديكورك الداخلي ويتحمل الاستخدام اليومي بأيدي أمهر النجارين، لنجمع بين اللمسة الفنية والجانب العملي المريح.",
+                "s9-title": "صيانة وتصليح النجارة",
+                "s9-desc": "نوفر خدمات صيانة شاملة للأعمال الخشبية. من إصلاح الأبواب والكوالين إلى تجديد الأخشاب التالفة، نعيد لأثاثك متانته ورونقه بسرعة واحترافية عالية وبأقل التكاليف لضمان بقاء ديكوراتك في أبهى صورة.",
+                "s10-title": "صيانة وتصليح خزائن",
+                "s10-desc": "نعالج كافة مشاكل الخزائن والدواليب، بدءاً من الأبواب السحابة والمفصلات وحتى الأرفف المكسورة. نستخدم قطع غيار قوية لضمان استمرارية عمل خزائنك بسلاسة وعودتها لحالتها المثالية لتستمتع براحة البال.",
+                "s11-title": "صيانة منزلية للديكور والموبيليا",
+                "s11-desc": "نحافظ على استثمارك في أثاثك وديكوراتك من خلال خدمات صيانة وتجديد متكاملة. نعالج الخدوش ونجدد الدهانات لتعود قطعك الخشبية كالجديدة تماماً، مع التزام تام بالسرعة والجودة في التنفيذ.",
+                "section-why": "لماذا نحن",
+                "w1-title": "جودة أعمالنا",
+                "w1-desc": "نستخدم أجود أنواع الأخشاب وأحدث التقنيات لنضمن لك قطعاً فنية متينة ومتقنة تعكس أعلى معايير الجودة.",
+                "w2-title": "التزامنا بالمواعيد",
+                "w2-desc": "نقدر وقتك الثمين، لذا نحرص على تنفيذ وتسليم كافة المشاريع بدقة متناهية في الوقت المتفق عليه تماماً.",
+                "w3-title": "ضمان أعمالنا",
+                "w3-desc": "نقدم ضماناً شاملاً على كافة أعمال النجارة والتفصيل لنوفر لك راحة البال وثقة مستدامة في خدماتنا.",
+                "w4-title": "اسعارنا التنافسية",
+                "w4-desc": "نوفر لك معادلة مثالية تجمع بين الفخامة والجودة العالية بأسعار مدروسة وتنافسية تناسب ميزانيتك.",
+                "section-contact": "تواصل معنا",
+                "contact-happy": "نسعد بتواصلكم",
+                "contact-phone": "رقم التواصل: 0567141523",
+                "contact-address": "6522 منصور الغزال، المِصِيْف، الرياض 12465",
+                "footer-copy": "جميع الحقوق محفوظة لدى/ نجار تفصيل دواليب وغرف ملابس 2027",
+                "dev-sig": "تم التصميم بواسطة المهندس / إسلام الشيخ"
+            },
+            en: {
+                "brand": "Custom Closets Carpenter",
+                "loader-title": "Welcome to Custom Closets Carpenter",
+                "loading-text": "Loading",
+                "nav-home": "Home",
+                "nav-services": "Services",
+                "nav-why": "Why Us",
+                "nav-contact": "Contact",
+                "hero-title": "Custom Wardrobes & Closets",
+                "hero-desc": "Crafting luxury from the finest wood. We specialize in custom wardrobes, dressing rooms, and innovative closets. Combining precision and modern design at competitive prices.",
+                "section-services": "Our Services",
+                "s1-title": "Custom Cabinets Design",
+                "s1-desc": "We create modern cabinets fitting any space and meeting your storage needs using high-quality materials and durable accessories.",
+                "s2-title": "Custom Wardrobes",
+                "s2-desc": "Wardrobes designed specifically to combine elegance and storage capacity. We focus on practical internal division.",
+                "s3-title": "Bedrooms Design",
+                "s3-desc": "Creating a calm and comfortable oasis with bedrooms designed to the highest quality standards.",
+                "s4-title": "Kids Rooms Design",
+                "s4-desc": "Designing kids' rooms that combine safety, fun, and durability using safe paints and smart space utilization.",
+                "s5-title": "Storage Rooms",
+                "s5-desc": "Smart storage solutions to eliminate clutter. Strong shelves and practical storage units.",
+                "s6-title": "Wall Decors",
+                "s6-desc": "Elevate your walls with wooden decors and claddings that add luxury and visual depth.",
+                "s7-title": "TV Units",
+                "s7-desc": "Make the TV area the center of elegance with attractive wooden TV decors and hidden lighting.",
+                "s8-title": "Custom Furniture",
+                "s8-desc": "Renew your home with unique, custom-made furniture pieces that are both durable and modern.",
+                "s9-title": "Carpentry Maintenance",
+                "s9-desc": "Comprehensive maintenance for woodwork. From fixing doors to renewing damaged wood.",
+                "s10-title": "Cabinets Maintenance",
+                "s10-desc": "Fixing all cabinet issues, from sliding doors to broken shelves, using strong spare parts.",
+                "s11-title": "Home Decor Maintenance",
+                "s11-desc": "Preserve your investment with integrated maintenance and renovation services for furniture and decor.",
+                "section-why": "Why Choose Us",
+                "w1-title": "High Quality",
+                "w1-desc": "Using the best types of wood and latest techniques to ensure durable and perfect artistic pieces.",
+                "w2-title": "Punctuality",
+                "w2-desc": "We value your time, ensuring accurate execution and delivery on the agreed-upon time.",
+                "w3-title": "Work Guarantee",
+                "w3-desc": "Providing comprehensive warranties on all carpentry work for your peace of mind.",
+                "w4-title": "Competitive Prices",
+                "w4-desc": "A perfect equation combining high luxury and quality with studied and competitive prices.",
+                "section-contact": "Contact Us",
+                "contact-happy": "We are happy to connect",
+                "contact-phone": "Phone: 0567141523",
+                "contact-address": "6522 Mansour Al-Ghazal, Al-Misif, Riyadh 12465",
+                "footer-copy": "All Rights Reserved / Custom Closets Carpenter 2027",
+                "dev-sig": "Designed by Eng. Islam Al-Sheikh"
+            }
+        };
+
+        // التبديل التلقائي واليدوي للغات
+        let currentLang = localStorage.getItem('siteLang') || (navigator.language.startsWith('en') ? 'en' : 'ar');
+        setLanguage(currentLang);
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(currentLang);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('lang-text').innerText = lang === 'ar' ? 'EN' : 'AR';
+            localStorage.setItem('siteLang', lang);
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+        }
+
         // إخفاء صفحة التحميل بعد 3 ثواني
         window.addEventListener('load', function() {
             setTimeout(function() {
